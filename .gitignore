@@ -1,0 +1,25 @@
+# Generated diagnostic reports and output folders
+_BACKUP_BEFORE_CLEAN/
+HardwareReport_*.txt
+Linux_HardwareIDs.txt
+Linux_Drivers_Firmware.txt
+dxdiag_*.txt
+BatteryReport_*.html
+
+# Operating system and filesystem artifacts
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# IDE and text editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# PowerShell and Windows development artifacts
+*.ps1xml
+*.log
+*.tmp
+*.cache
