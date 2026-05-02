@@ -5,12 +5,12 @@ on:
     branches: [ main ]
     paths:
       - '**.md'
-      - '.github/.markdownlint.json'
+      - '.github/workflows/.markdownlint.json'
   pull_request:
     branches: [ main ]
     paths:
       - '**.md'
-      - '.github/.markdownlint.json'
+      - '.github/workflows/.markdownlint.json'
 
 jobs:
   lint:
@@ -23,5 +23,4 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v19
         with:
           globs: '**/*.md'
-          config: '.github/.markdownlint.json'
-          continueOnError: false
+          config: '.github/workflows/.markdownlint.json'
