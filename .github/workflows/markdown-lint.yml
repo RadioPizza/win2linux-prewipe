@@ -1,0 +1,27 @@
+name: Markdown Lint
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.md'
+      - '.github/.markdownlint.json'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.md'
+      - '.github/.markdownlint.json'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Lint Markdown files
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: '**/*.md'
+          config: '.github/.markdownlint.json'
+          continueOnError: false
