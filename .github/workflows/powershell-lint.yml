@@ -3,8 +3,14 @@ name: PowerShell Syntax Check
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'scripts/**.ps1'
+      - '.github/workflows/powershell-lint.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'scripts/**.ps1'
+      - '.github/workflows/powershell-lint.yml'
 
 jobs:
   lint:
