@@ -1,0 +1,24 @@
+name: PowerShell Syntax Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run PSScriptAnalyzer
+        uses: microsoft/psscriptanalyzer-action@v1
+        with:
+          # Проверять все .ps1 файлы в папке scripts (рекурсивно)
+          path: ./scripts
+          recurse: true
+          # Уровень серьёзности, при котором пайплайн упадёт (Error или Warning)
+          severity: Error
+          # Если хотите, чтобы даже предупреждения "роняли" проверку, поставьте Warning
