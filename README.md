@@ -6,32 +6,41 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![PowerShell Syntax Check](https://github.com/RadioPizza/win2linux-prewipe/actions/workflows/powershell-lint.yml/badge.svg)
 
-**win2linux-prewipe** - Universal PowerShell hardware snapshot tool for Windows-to-Linux migrations. Collects raw Hardware IDs, EDID/PPI, storage controller mode, firmware versions, and driver inventory **before wiping the system**.
+**win2linux-prewipe** - Universal PowerShell hardware snapshot tool 
+for Windows-to-Linux migrations.
+
+Collects raw Hardware IDs, EDID/PPI, storage controller mode, 
+firmware versions, and driver inventory **before wiping the system**.
 
 ## 🎯 Problem
 
-Formatting the drive during Linux installation destroys critical hardware context:
+Formatting the drive during OS installation destroys critical hardware context:
+
 - Exact `VEN_XXXX&DEV_YYYY` / `VID_XXXX&PID_YYYY` (PCI/USB)
 - Intel VMD/RST controller state (affects NVMe detection)
 - EDID, physical display size, and calculated PPI
 - IR cameras, dot projectors, fingerprint sensors
 - SSD/BIOS firmware versions, third‑party drivers
 
-This script preserves that data using **only built‑in Windows components** – no external tools, no installation.
+This script preserves that data using **only built‑in Windows components** 
+– no external tools, no installation.
 
 ## 🚀 Quick Start
 
 1. Open PowerShell **as Administrator**.
 2. Run:
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\scripts\Get-WinHardwareSnapshot.ps1
-```
-3. Wait for completion. All reports will be saved to `D:\_BACKUP_BEFORE_CLEAN\`.
+    ```powershell
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    .\scripts\Get-WinHardwareSnapshot.ps1
+    ```
 
-    > Note: If your system does not have a D: drive, edit the $OutputDir variable inside the script before running, or run the script from a location where you have write access.
+3. Wait for completion. All reports will be saved to `D:\_BACKUP_BEFORE_CLEAN\`.
+    > Note: If your system does not have a D: drive, 
+    edit the $OutputDir variable inside the script before running, 
+    or run the script from a location where you have write access.
 
 ## 📂 Output Files
+
 
 | File | Description |
 |------|-------------|
@@ -50,6 +59,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ## 🤝 Contributing
 
 If a device is missed or misidentified:
+
 1. Attach `Linux_HardwareIDs.txt` and the relevant report section
 2. Specify exact laptop/motherboard model
 3. Open an Issue or PR with a regex or WMI fallback patch
