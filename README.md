@@ -37,8 +37,8 @@ This script preserves that data using **only built‑in Windows components**
 
 3. Wait for completion. All reports will be saved to `D:\_BACKUP_BEFORE_CLEAN\`.
     > Note: If your system does not have a D: drive,
-    edit the $OutputDir variable inside the script before running,
-    or run the script from a location where you have write access.
+edit the $OutputDir variable inside the script before running,
+or run the script from a location where you have write access.
 
 ## 📂 Output Files
 
