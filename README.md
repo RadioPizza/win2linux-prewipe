@@ -37,18 +37,18 @@ This script preserves that data using **only built‑in Windows components**
 
 3. Wait for completion. All reports will be saved to `D:\_BACKUP_BEFORE_CLEAN\`.
     > Note: If your system does not have a D: drive,
-edit the $OutputDir variable inside the script before running,
-or run the script from a location where you have write access.
+    > edit the $OutputDir variable inside the script before running,
+    > or run the script from a location where you have write access.
 
 ## 📂 Output Files
 
-    | File | Description |
-    |------|-------------|
-    | `HardwareReport_*.txt` | Full human-readable diagnostic (CPU, RAM, GPU, displays, input, biometrics, audio, network) |
-    | `Linux_HardwareIDs.txt` | Clean `VEN/VID` + device names. Ready for [linux-hardware.org](https://linux-hardware.org) and `libfprint` |
-    | `Linux_Drivers_Firmware.txt` | Storage controller mode (VMD/AHCI), SSD/BIOS firmware, third‑party drivers (including DCH) |
-    | `dxdiag_*.txt` | Complete DirectX Diagnostic Tool dump |
-    | `BatteryReport_*.html` | Battery wear, cycle count, and capacity history (`powercfg`) |
+| File | Description |
+|------|-------------|
+| `HardwareReport_*.txt` | Full human-readable diagnostic (CPU, RAM, GPU, displays, input, biometrics, audio, network) |
+| `Linux_HardwareIDs.txt` | Clean `VEN/VID` + device names. Ready for [linux-hardware.org](https://linux-hardware.org) and `libfprint` |
+| `Linux_Drivers_Firmware.txt` | Storage controller mode (VMD/AHCI), SSD/BIOS firmware, third‑party drivers (including DCH) |
+| `dxdiag_*.txt` | Complete DirectX Diagnostic Tool dump |
+| `BatteryReport_*.html` | Battery wear, cycle count, and capacity history (`powercfg`) |
 
 ## ⚙️ Requirements
 
