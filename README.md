@@ -1,11 +1,10 @@
+# win2linux-prewipe
+
 ![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)
 ![PowerShell](https://custom-icon-badges.demolab.com/badge/PowerShell-0078D6?logo=powershell&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active%20development-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![PowerShell Syntax Check](https://github.com/RadioPizza/win2linux-prewipe/actions/workflows/powershell-lint.yml/badge.svg)
-
-
-# win2linux-prewipe
 
 **win2linux-prewipe** - Universal PowerShell hardware snapshot tool for Windows-to-Linux migrations. Collects raw Hardware IDs, EDID/PPI, storage controller mode, firmware versions, and driver inventory **before wiping the system**.
 
